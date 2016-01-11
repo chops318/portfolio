@@ -10,8 +10,6 @@ function Project (opts) {
 Project.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.removeClass('template');
-  $newArticle.find('.byline a').html(this.author);
-  $newArticle.find('.byline a').attr('href', this.authorUrl);
   $newArticle.find('h1:first').html(this.company);
   $newArticle.find('.technologies').html(this.technologies)
   $newArticle.find('.article-body').html(this.body);
