@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <script id='myProjects' type='text/x-handlebars-template'>
-        <article data-category='{{category}}' data-author='{{company}}'>
+        <article>
             <header>
                 <h1>{{company}}</h1>
                 <div class="byline">
                     Published <time pubdate datetime="01-01-2016">{{publishedOn}}</time>
                 </div>
+                <img src="{{image}}">
             </header>
-            <section class="article-body">{{{body}}}</section>
+            <section class="article-body">{{info}}</section>
             <a href="#" class="read-on">Read on &rarr;</a>
         </article>
     </script>

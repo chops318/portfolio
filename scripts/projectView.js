@@ -75,4 +75,4 @@ $(document).ready(function() {
   projectView.handleMainNav();
   projectView.setTeasers();
   projectView.menuSlide();
-})
+});
