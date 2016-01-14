@@ -59,7 +59,15 @@ projectView.menuSlide = function () {
     $('.main-nav ul').toggle(350);
   });
 };
+projectView.setTeasers = function() {
+  $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
 
+  $('#articles').on('click', 'a.read-on', function(e) {
+    e.preventDefault();
+    $(this).parent().find('*').fadeIn();
+    $(this).hide();
+  });
+};
 $(document).ready(function() {
   projectView.populateFilters();
   projectView.handleCategoryFilter();
@@ -67,4 +75,4 @@ $(document).ready(function() {
   projectView.handleMainNav();
   projectView.setTeasers();
   projectView.menuSlide();
-})
+});

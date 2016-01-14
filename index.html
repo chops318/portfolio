@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>sspohC's Stuff</title>
     <meta name="viewport" content="width-device-width" initial-scale="1">
@@ -9,56 +10,70 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-  </head>
-  <body>
+    <script id='myProjects' type='text/x-handlebars-template'>
+        <article>
+            <header>
+                <h1>{{company}}</h1>
+                <div class="byline">
+                    Published <time pubdate datetime="01-01-2016">{{publishedOn}}</time>
+                </div>
+                <img src="{{image}}">
+            </header>
+            <section class="article-body">{{info}}</section>
+            <a href="#" class="read-on">Read on &rarr;</a>
+        </article>
+    </script>
+</head>
+
+<body>
     <header class="site-header clearfix">
-      <nav class="main-nav">
-        <ul class="left-nav">
-          <ul>
-            <li>
-              sspohC
-            </li>
-          </ul>
-          <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-          <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-          <li><a href="http://github.com/sspohC" target="_blank" class="icon-github"> GitHub</a></li>
-        </ul>
-        <a class="brand" href="">Menu<span class="icon-menu menuActivate"></a>
-      </nav>
+        <nav class="main-nav">
+            <ul class="left-nav">
+                <ul>
+                    <li>
+                        sspohC
+                    </li>
+                </ul>
+                <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a>
+                </li>
+                <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a>
+                </li>
+                <li><a href="http://github.com/sspohC" target="_blank" class="icon-github"> GitHub</a>
+                </li>
+            </ul>
+            <a class="brand" href="">Menu<span class="icon-menu menuActivate"></a>
+        </nav>
     </header>
     <main>
-      <section id="articles" class="tab-content">
-        <article class="template template" data-category="cat">
-          <header>
-            <h1>Title</h1>
-            <p>
+      <section id="projects">
 
-            </p>
-          </header>
-          <section class="article-body"></section>
-        </article>
       </section>
+
         <section>
-          <ul>
-            <li>Web Development</li>
-            <li>WWII
-              <ul>
+            <ul>
+                <li>Web Development</li>
+                <li>WWII
+                    <ul>
+                        <li>
+                            Stephen Ambrose
+                        </li>
+                    </ul>
                 <li>
-                  Stephen Ambrose
+                      Playing basketball
                 </li>
-              </ul>
-            <li>Playing basketball</li>
-          </ul>
+            </ul>
         </section>
-      </section>
+        </section>
     </main>
     <footer>
-      &copy; 2016 sspohC
+        &copy; 2016 sspohC
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src='vendor/js/handlebars.js'></script>
     <script src="scripts/projectData.js"></script>
     <script src="scripts/project.js"></script>
     <script src="scripts/projectView.js"></script>
-  </body>
+</body>
+
 </html>

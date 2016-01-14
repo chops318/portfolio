@@ -1,26 +1,21 @@
 var projects = [];
 
 function Project (opts) {
-  this.author = opts.author;
   this.company = opts.company;
   this.technologies = opts.technologies;
-  this.body = opts.body;
+  this.publishedOn = opts.publishedOn;
+  this.info = opts.info;
 }
 
 Project.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
-  $newArticle.removeClass('template');
-  $newArticle.find('.byline a').html(this.author);
-  $newArticle.find('.byline a').attr('href', this.authorUrl);
-  $newArticle.find('h1:first').html(this.company);
-  $newArticle.find('.technologies').html(this.technologies)
-  $newArticle.find('.article-body').html(this.body);
-  $newArticle.find('time[pubdate]').attr('datetime', this.publishedOn)
-  $newArticle.find('time[pubdate]').attr('title', this.publishedOn)
-  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago')
-  $newArticle.append('<hr>');
-  return $newArticle;
-}
+  var projectTemplate = $('#myProjects').html();
+  var compileTemplate = Handlebars.compile(projectTemplate);
+  var html = compileTemplate(this);
+
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishStatus = this.publishedOn ? 'published' + this.daysAgo + ' days ago' : '(draft)';
+  $('#projects').append(html);
+};
 
 projData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
@@ -28,8 +23,8 @@ projData.sort(function(a,b) {
 
 projData.forEach(function(ele) {
   projects.push(new Project(ele));
-})
+});
 
 projects.forEach(function(a){
-  $('#articles').append(a.toHtml())
+  $('#articles').append(a.toHtml());
 });
