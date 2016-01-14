@@ -10,7 +10,7 @@
 .icon-menu {
   font-size: 2em;
   float: right;
-  
+
 }
 .brand {
   line-height: 2em;
@@ -60,10 +60,20 @@
 .tab; {
   color: #fff;
 }
-.technologies {
+.img {
 
 }
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 
+}
+#projects {
+  margin: 0 auto;
+  text-align: center;
+}
 /* DONE: Now add styles for how things should look on a larger screen:
          - Hide the hamburger.
          - Main should be all on one row, with padding spaced better for a larger screen.

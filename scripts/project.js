@@ -5,6 +5,7 @@ function Project (opts) {
   this.technologies = opts.technologies;
   this.publishedOn = opts.publishedOn;
   this.info = opts.info;
+  this.image = opts.image;
 }
 
 Project.prototype.toHtml = function() {

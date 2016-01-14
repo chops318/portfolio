@@ -6,6 +6,15 @@ var projData = [
     siteUrl:   'http://www.pelstate.com',
     publishedOn: '2014-08-10',
     info: 'test, test, test, test, test, test, test, test, test, test',
-    image: ''
+    image: 'images/pel-state-logo.png'
+  },
+  {
+    company: 'Tomahawk Services',
+    job: '',
+    technologies: '',
+    siteUrl: '',
+    publishedOn: '',
+    info: '',
+    image: 'images/tomahawk-logo.png'
   }
 ];
