@@ -70,10 +70,11 @@
   margin: 0 auto;
 
 }
-#projects {
-  margin: 0 auto;
-  text-align: center;
+
+.projectLogo {
+  float:left;
 }
+
 /* DONE: Now add styles for how things should look on a larger screen:
          - Hide the hamburger.
          - Main should be all on one row, with padding spaced better for a larger screen.
@@ -96,5 +97,8 @@
   }
   .left-nav {
     margin: 0 0;
+  }
+  .lol {
+    float:right;
   }
 }

@@ -11,17 +11,16 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <script id='myProjects' type='text/x-handlebars-template'>
-        <article>
-            <header>
-                <h2>{{company}}</h2>
-                <div class="byline">
-                    Published <time pubdate datetime="01-01-2016">{{publishedOn}}</time>
+            <article class="project">
+                <h3 class="projectHeader">{{company}}</h2>
+                <img class="img-responsive projectLogo" src="{{image}}">
+                <div class="byline clearfix">
+                    <img src="images/wordpress.png">
+                    <img src="images/bootstrap.png">
                 </div>
-                <img class="img-responsive" src="{{image}}">
-            </header>
-            <section class="article-body">{{info}}</section>
-            <a href="#" class="read-on">Read on &rarr;</a>
-        </article>
+             <section class="article-body">{{info}}</section>
+             <a href="#" class="read-on">Read on &rarr;</a>
+           </article>
     </script>
 </head>
 
@@ -36,7 +35,7 @@
                 </ul>
                 <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a>
                 </li>
-                <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a>
+                <li class="tab" data-content="about"><a href="#about" class="icon-address-book pagescroll"> About</a>
                 </li>
                 <li><a href="http://github.com/sspohC" target="_blank" class="icon-github"> GitHub</a>
                 </li>
@@ -45,11 +44,11 @@
         </nav>
     </header>
     <main>
-      <section id="projects">
+      <section id="projects" class="container">
 
       </section>
 
-        <section>
+        <section id="about">
             <ul>
                 <li>Web Development</li>
                 <li>WWII
@@ -68,7 +67,6 @@
     <footer>
         &copy; 2016 sspohC
     </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src='vendor/js/handlebars.js'></script>
     <script src="scripts/projectData.js"></script>
