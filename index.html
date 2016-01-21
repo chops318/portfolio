@@ -19,7 +19,6 @@
                     <img src="images/bootstrap.png">
                 </div>
              <section class="article-body">{{info}}</section>
-             <a href="#" class="read-on">Read on &rarr;</a>
            </article>
     </script>
 </head>
@@ -43,8 +42,8 @@
             <a class="brand" href="">Menu<span class="icon-menu menuActivate"></a>
         </nav>
     </header>
-    <main>
-      <section id="projects" class="container">
+    <main class="container">
+      <section id="projects">
 
       </section>
 
@@ -54,7 +53,7 @@
                 <li>WWII
                     <ul>
                         <li>
-                            Stephen Ambrose
+                            Stephen Ambrose - will have more content here soon.
                         </li>
                     </ul>
                 <li>
@@ -69,11 +68,10 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src='vendor/js/handlebars.js'></script>
-    <script src="scripts/projectData.js"></script>
     <script src="scripts/project.js"></script>
     <script src="scripts/projectView.js"></script>
     <script>
-      Project.fetchAll();    
+      Project.fetchAll();
     </script>
 </body>
 
