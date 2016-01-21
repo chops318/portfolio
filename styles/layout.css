@@ -16,9 +16,9 @@
   max-width: 80%;
 }
 
-#filters select {
-  width: 90%;
-  margin: .2em 5%;
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 /* DONE: Add styles so the filters lay out better on desktop. */
@@ -36,5 +36,17 @@
   #filters li {
     width: 20em;
     display: inline;
+  }
+  #projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .project {
+    flex-basis: 30%;
+    margin: 0 auto;
+
   }
 }

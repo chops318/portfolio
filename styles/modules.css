@@ -10,7 +10,7 @@
 .icon-menu {
   font-size: 2em;
   float: right;
-  
+
 }
 .brand {
   line-height: 2em;
@@ -60,8 +60,19 @@
 .tab; {
   color: #fff;
 }
-.technologies {
+.img {
 
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+}
+
+.projectLogo {
+  float:left;
 }
 
 /* DONE: Now add styles for how things should look on a larger screen:
@@ -86,5 +97,8 @@
   }
   .left-nav {
     margin: 0 0;
+  }
+  .lol {
+    float:right;
   }
 }
