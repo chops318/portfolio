@@ -20,6 +20,10 @@
   display: flex;
   flex-direction: column;
 }
+.project {
+  border: 1px solid black;
+  
+}
 
 /* DONE: Add styles so the filters lay out better on desktop. */
 @media only screen and (min-width: 640px) {

@@ -68,7 +68,7 @@
   height: auto;
   display: block;
   margin: 0 auto;
-
+  padding-left:2px; 
 }
 
 .projectLogo {
