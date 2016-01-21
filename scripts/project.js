@@ -1,4 +1,3 @@
-var projects = [];
 
 function Project (opts) {
   this.company = opts.company;
@@ -7,6 +6,7 @@ function Project (opts) {
   this.info = opts.info;
   this.image = opts.image;
 }
+Project.all = [];
 
 Project.prototype.toHtml = function() {
   var projectTemplate = $('#myProjects').html();
@@ -18,14 +18,30 @@ Project.prototype.toHtml = function() {
   $('#projects').append(html);
 };
 
-projData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
-
-projData.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
-
-projects.forEach(function(a){
-  $('#articles').append(a.toHtml());
-});
+Project.loadAll = function(projData) {
+  projData.forEach(function(ele){
+    Project.all.push(new Project(ele))
+  })
+};
+Project.fetchAll = function() {
+  $.ajax({
+    dataType: "json",
+    url: "/scripts/projects.JSON",
+    success: function(data, status, xhr) {
+      if(localStorage.tagme == xhr.getResponseHeader('ETag')){
+        //console.log(localStorage.projData)
+        Project.loadAll(JSON.parse(localStorage.projData));
+        projectView.initIndexPage();
+        console.log('Match');
+      } else {
+        localStorage.tagme = xhr.getResponseHeader('ETag');
+        $.getJSON('/scripts/projects.JSON', function(projData){
+          Project.loadAll(projData);
+          localStorage.projData = JSON.stringify(projData);
+          projectView.initIndexPage();
+        });
+        console.log('No Match');
+      }
+    }
+  });
+}

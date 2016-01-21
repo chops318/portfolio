@@ -1,4 +1,4 @@
-var projData = [
+[
   {
     company:     'Pel-State',
     job:    'Creating of web presence ',
@@ -80,4 +80,4 @@ var projData = [
     info: '',
     image: 'images/tomahawk.png'
   }
-];
+]

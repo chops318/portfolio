@@ -26,6 +26,13 @@ projectView.setTeasers = function() {
     $(this).hide();
   });
 };
+
+projectView.initIndexPage = function() {
+  Project.all.forEach(function(p) {
+    $('#projects').append(p.toHtml());
+  });
+}
+
 $(document).ready(function() {
   projectView.handleMainNav();
   projectView.setTeasers();
