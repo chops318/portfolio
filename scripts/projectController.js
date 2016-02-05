@@ -3,6 +3,9 @@
 
   projectController.index = function() {
     Project.fetchAll(projectView.initIndexPage);
+    $('main > section').hide();
+    $('#projects').show();
+
   };
 
   module.projectController = projectController;

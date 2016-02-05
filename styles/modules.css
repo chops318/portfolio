@@ -5,16 +5,20 @@
 }
 
 
-
+footer {
+  margin-left: 2em;
+ }
 .icon-menu {
   font-size: 2em;
   float: right;
+  color: white;
 
 }
 .brand {
   line-height: 2em;
   float:right;
-  font-size: 1.5em
+  font-size: 1.5em;
+  color: white;
 }
 
 .main-nav {

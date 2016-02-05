@@ -7,11 +7,12 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
+  font-family: 'Raleway', sans-serif;
 }
 
 hr {
   margin: 1em;
-  width: 80%;
+  width: 95%;
 }
 
 /*TEXT STYLES
@@ -32,8 +33,9 @@ a, a:link, a:active {
 }
 
 a:hover, a:focus {
-  color: #29506D;
+  /*color: red;*/
 }
 
 a:visited {
+  /*color: green;*/
 }
