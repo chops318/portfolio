@@ -1,5 +1,5 @@
-// Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
-var projectView = {};
+(function(module){
+  var projectView = {};
 
 projectView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function(e) {
@@ -38,3 +38,5 @@ $(document).ready(function() {
   projectView.setTeasers();
   projectView.menuSlide();
 });
+module.projectView = projectView;
+})(window);

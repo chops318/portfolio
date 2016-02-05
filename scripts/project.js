@@ -1,4 +1,4 @@
-
+(function(module){
 function Project (opts) {
   this.company = opts.company;
   this.technologies = opts.technologies;
@@ -45,3 +45,7 @@ Project.fetchAll = function() {
     }
   });
 };
+
+module.Project = Project;
+
+})(window);
