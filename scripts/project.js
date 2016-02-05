@@ -20,13 +20,13 @@ Project.prototype.toHtml = function() {
 
 Project.loadAll = function(projData) {
   projData.forEach(function(ele){
-    Project.all.push(new Project(ele))
-  })
+    Project.all.push(new Project(ele));
+  });
 };
 Project.fetchAll = function() {
   $.ajax({
-    dataType: "json",
-    url: "/scripts/projects.JSON",
+    dataType: 'json',
+    url: '../data/projects.JSON',
     success: function(data, status, xhr) {
       if(localStorage.tagme == xhr.getResponseHeader('ETag')){
         //console.log(localStorage.projData)
@@ -35,7 +35,7 @@ Project.fetchAll = function() {
         console.log('Match');
       } else {
         localStorage.tagme = xhr.getResponseHeader('ETag');
-        $.getJSON('/scripts/projects.JSON', function(projData){
+        $.getJSON('../data/projects.JSON', function(projData){
           Project.loadAll(projData);
           localStorage.projData = JSON.stringify(projData);
           projectView.initIndexPage();
@@ -44,4 +44,4 @@ Project.fetchAll = function() {
       }
     }
   });
-}
+};
