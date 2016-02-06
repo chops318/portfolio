@@ -1,2 +1,4 @@
 .DS_Store
 /image
+/scripts/githubToken.js
+node_modules
