@@ -33,19 +33,12 @@ projectView.initIndexPage = function() {
   });
 };
 
-projectView.slickSlider = function() {
-  $('.projects').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll, 3
-  })
-}
+
 
 $(document).ready(function() {
   projectView.handleMainNav();
   projectView.setTeasers();
   projectView.menuSlide();
-  projectView.slickSlider();
 });
 module.projectView = projectView;
 })(window);
